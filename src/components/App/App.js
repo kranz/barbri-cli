@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import styles from './styles.css'
 import { translate, Trans } from 'react-i18next';
+import { Button, Icon, Grid, Image } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
@@ -25,6 +26,28 @@ class App extends Component {
           </Trans>
         </p>
         <p className={styles.pippo}>{t('description.part2')}</p>
+        <Grid celled>
+          <Grid.Row>
+            <Grid.Column width={3}>
+              <Image src='./image.png' />
+            </Grid.Column>
+            <Grid.Column width={13}>
+              <Image src='./centered-paragraph.png' />
+            </Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column width={3}>
+              <Image src='./image.png' />
+            </Grid.Column>
+            <Grid.Column width={10}>
+              <Image src='./paragraph.png' />
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Image src='./image.png' />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     );
   }
