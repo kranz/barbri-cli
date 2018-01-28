@@ -1,0 +1,8 @@
+:local(.errormsg) {
+  text-align: center;
+  margin: 0px;
+}
+
+:local(.icon-center) {
+  margin: 0px;
+}
