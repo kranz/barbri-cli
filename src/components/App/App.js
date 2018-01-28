@@ -8,14 +8,14 @@ class App extends Component {
   render() {
     return (
       <div className={styles.AppComp}>
-        <header className='AppHeader'>
-          <img src={logo} className='AppLogo' alt="logo" />
-          <h1 className='AppTitle'>Welcome to React</h1>
+        <header className={styles.AppHeader}>
+          <img src={logo} className={styles.AppLogo} alt="logo" />
+          <h1 className={styles.AppTitle}>Welcome to React</h1>
         </header>
-        <p className='AppIntro'>
+        <p className={styles.AppIntro}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <p className='pippo'>ZIO PAPERONE</p>
+        <p className={styles.pippo}>ZIO PAPERONE</p>
       </div>
     );
   }

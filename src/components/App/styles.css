@@ -2,23 +2,23 @@
   text-align: center;
 }
 
-.AppLogo {
+:local(.AppLogo) {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.AppHeader {
+:local(.AppHeader) {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+:local(.App-title) {
   font-size: 1.5em;
 }
 
-.App-intro {
+:local(.App-intro) {
   font-size: large;
 }
 
@@ -27,7 +27,7 @@
   to { transform: rotate(360deg); }
 }
 
-.pippo {
+:local(.pippo) {
   color: red;
   font-size: 72px;
 }
