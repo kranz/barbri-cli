@@ -1,7 +1,17 @@
 {
+  "apptitle": "Baron Brisse",
   "title": "Benvenuti su react con i18next",
+  "pagenotfound": "Pagina non trovata",
   "description": {
     "part1": "Per iniziare, modificare <1>src/App.js</1> e salvare per ricaricare.",
     "part2": "Cambia la lingua tra inglese e italiano usando i pulsanti qui sopra."
+  },
+  "home": {
+    "meta": "Le ricette di oggi per domani",
+    "description": "Ingredienti con amore"
+  },
+  "navbar": {
+    "home": "Home",
+    "foods": "Prodotti"
   }
 }

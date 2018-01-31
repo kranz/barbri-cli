@@ -1,6 +1,6 @@
 import slug from 'slug'
 
-const products = [
+const foods = [
   {name:'acqua', unitMeasure:'kg', unitPrice:0.0000, vatCode: 0.0000, category: 'liquidi' },
   {name:'burro', unitMeasure:'kg', unitPrice:7.0000, vatCode: 0.0400, category: 'grassi' },
   {name:'cassonade', unitMeasure:'kg', unitPrice:6.0000, vatCode: 0.0400, category: 'zuccheri' },
@@ -114,5 +114,5 @@ const products = [
 ]
 
 export {
-  products,
+  foods,
 }

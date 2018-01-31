@@ -6,7 +6,7 @@ const NotFound = () => (
   <Message negative size='massive' className={styles.errormsg}>
     <Message.Header>
       <h1>404</h1>
-      <p>Page not found</p>
+      <p>PAGE NOT FOUND</p>
     </Message.Header>
     <Icon name='frown' size='massive' className={styles.iconCenter} />
   </Message>

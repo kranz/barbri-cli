@@ -1,15 +1,15 @@
 import {
-  products,
+  foods,
 } from './dummy-data'
 
-let cachedProducts = null
+let cachedFoods = null
 
-export function getProducts () {
+export function getFoods () {
   return new Promise((res) => {
-    if (cachedProducts === null) {
-      cachedProducts = products
-      return setTimeout(() => res(cachedProducts), 800)
+    if (cachedFoods === null) {
+      cachedFoods = foods
+      return setTimeout(() => res(cachedFoods), 800)
     }
-    return res(cachedProducts)
+    return res(cachedFoods)
   })
 }

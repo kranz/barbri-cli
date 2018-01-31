@@ -1,7 +1,17 @@
 {
+  "apptitle": "Baron Brisse",
   "title": "Benvenuten zu react kon i18next",
+  "pagenotfound": "Pacina nein trofata",
   "description": {
     "part1": "Per iniziaren, modificaren <1>src/App.js</1> und salvaren per ricaricaren.",
     "part2": "Kambia la linguen mit english und italianen di usaren pulsanten qvi zopra."
+  },
+  "home": {
+    "meta": "Riceta ti oggi fur domanen",
+    "description": "Inkredienten mit klein amoren"
+  },
+  "navbar": {
+    "home": "Home",
+    "foods": "Ciben"
   }
 }
