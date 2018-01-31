@@ -1,6 +1,7 @@
 import slug from 'slug'
+import _ from 'lodash'
 
-const foods = [
+const rawFoods = [
   {name:'acqua', unitMeasure:'kg', unitPrice:0.0000, vatCode: 0.0000, category: 'liquidi' },
   {name:'burro', unitMeasure:'kg', unitPrice:7.0000, vatCode: 0.0400, category: 'grassi' },
   {name:'cassonade', unitMeasure:'kg', unitPrice:6.0000, vatCode: 0.0400, category: 'zuccheri' },
@@ -14,7 +15,7 @@ const foods = [
   {name:'tuorlo', unitMeasure:'kg', unitPrice:5.5500, vatCode: 0.1000, category: 'proteine' },
   {name:'uovo intero', unitMeasure:'kg', unitPrice:5.5500, vatCode: 0.1000, category: 'proteine' },
   {name:'zucchero semolato', unitMeasure:'kg', unitPrice:1.0000, vatCode: 0.0400, category: 'zuccheri' },
-  {name:'bacca di vaniglia', unitMeasure:'kg', unitPrice:152.0000, vatCode: 0.2200, category: 'spezie circa 3 grammi a baccell'o},
+  {name:'bacca di vaniglia', unitMeasure:'kg', unitPrice:152.0000, vatCode: 0.2200, category: 'spezie circa 3 grammi a baccello'},
   {name:'amido di mais', unitMeasure:'kg', unitPrice:1.5000, vatCode: 0.1000, category: 'farine' },
   {name:'caffè macinato', unitMeasure:'kg', unitPrice:20.0000, vatCode: 0.1000, category: 'spezie' },
   {name:'zucchero a velo', unitMeasure:'kg', unitPrice:2.0000, vatCode: 0.0400, category: 'zuccheri' },
@@ -59,7 +60,7 @@ const foods = [
   {name:'Massa di cacao', unitMeasure:'kg', unitPrice:15.0000, vatCode: 0.1000, category: 'cioccolato' },
   {name:'Cacao Amaro in polvere', unitMeasure:'kg', unitPrice:13.0000, vatCode: 0.1000, category: 'cioccolato' },
   {name:'Tazzina caffè monouso', unitMeasure:'pz', unitPrice:0.1000, vatCode:0.2200, category:'imballi'},
-  {name:'Caffè "gourmet" ', unitMeasure:'kg', unitPrice:55.0000, vatCode: 0.1000, category: 'caffè' },
+  {name:'Caffè gourmet', unitMeasure:'kg', unitPrice:55.0000, vatCode: 0.1000, category: 'caffè' },
   {name:'Caffè normale', unitMeasure:'kg', unitPrice:25.0000, vatCode: 0.1000, category: 'caffè' },
   {name:'Acido citrico', unitMeasure:'kg', unitPrice:30.0000, vatCode: 0.1000, category: 'acidificanti'},
   {name:'Mora purea congelato', unitMeasure:'kg', unitPrice:10.7100, vatCode: 0.1000, category: 'frutta purea' },
@@ -81,7 +82,7 @@ const foods = [
   {name:'Letchi in purea', unitMeasure:'kg', unitPrice:12.0000, vatCode: 0.1000, category: 'frutta purea' },
   {name:'Glucosio (sciroppo)', unitMeasure:'kg', unitPrice:6.0000, vatCode: 0.0400, category: 'zuccheri' },
   {name:'Essenza di rosa', unitMeasure:'kg', unitPrice:47.0000, vatCode: 0.2200, category: 'aromi' },
-  {name:'Zucchero "neige decor"', unitMeasure:'kg', unitPrice:22.0000, vatCode: 0.0400, category: 'zuccheri' },
+  {name:'Zucchero neige decor', unitMeasure:'kg', unitPrice:22.0000, vatCode: 0.0400, category: 'zuccheri' },
   {name:'Fragole fresche', unitMeasure:'kg', unitPrice:12.0000, vatCode: 0.0400, category: 'Frutta fresca' },
   {name:'colorante rosso carminio', unitMeasure:'kg', unitPrice:500.0000, vatCode: 0.2200, category: 'coloranti' },
   {name:'colorante rosso fragola', unitMeasure:'kg', unitPrice:50.0000, vatCode: 0.2200, category: 'coloranti' },
@@ -98,7 +99,7 @@ const foods = [
   {name:'Farina per croissant', unitMeasure:'kg', unitPrice:1.5000, vatCode: 0.0400, category: 'farine' },
   {name:'Malto in polvere', unitMeasure:'kg', unitPrice:10.0000, vatCode: 0.1000, category: 'lieviti' },
   {name:'Lievito chimico', unitMeasure:'kg', unitPrice:15.0000, vatCode: 0.1000, category: 'lieviti' },
-  {name:'Acqua di fiori di arancio', unitMeasure:'kg', unitPrice: 21.7000, vatCode: 0.2200, category: 'aromi'}
+  {name:'Acqua di fiori di arancio', unitMeasure:'kg', unitPrice: 21.7000, vatCode: 0.2200, category: 'aromi'},
   {name:'Noci sgusciate', unitMeasure:'kg', unitPrice:25.0000, vatCode: 0.1000, category: 'frutta secca' },
   {name:'Scorza di arancia candita', unitMeasure:'kg', unitPrice:20.0000, vatCode: 0.0400, category: 'canditi' },
   {name:'Arancia fresca', unitMeasure:'kg', unitPrice:2.5000, vatCode: 0.0400, category: 'Frutta fresca' },
@@ -112,6 +113,8 @@ const foods = [
   {name:'Zucchero Muscovado', unitMeasure:'kg', unitPrice:4.9300, vatCode: 0.1000, category: 'Zucchero'},
   {name:'Tè alla violetta in foglie', unitMeasure:'kg', unitPrice:40.0000, vatCode: 0.1000, category: 'Te e tisane'}
 ]
+
+const foods = _.sortBy(rawFoods, o => o.name.toUpperCase())
 
 export {
   foods,
