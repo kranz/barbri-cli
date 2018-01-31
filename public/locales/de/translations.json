@@ -13,5 +13,11 @@
   "navbar": {
     "home": "Home",
     "foods": "Ciben"
+  },
+  "foods": {
+    "unitprice": "Prezzen unitarien",
+    "unitmeasure": "Unità ti misuren",
+    "vatlabel": "IVEN"
+
   }
 }

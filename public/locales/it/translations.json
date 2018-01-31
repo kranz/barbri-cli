@@ -13,5 +13,10 @@
   "navbar": {
     "home": "Home",
     "foods": "Prodotti"
+  },
+  "foods": {
+    "unitprice": "Prezzo unitario",
+    "unitmeasure": "Unità di misura",
+    "vatlabel": "IVA"
   }
 }

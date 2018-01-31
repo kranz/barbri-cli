@@ -13,5 +13,10 @@
   "navbar": {
     "home": "Home",
     "foods": "Foods"
+  },
+  "foods": {
+    "unitprice": "Unit Price",
+    "unitmeasure": "Unit Measure",
+    "vatlabel": "VAT"
   }
 }
