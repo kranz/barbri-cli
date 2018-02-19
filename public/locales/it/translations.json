@@ -12,7 +12,8 @@
   },
   "navbar": {
     "home": "Home",
-    "foods": "Prodotti"
+    "foods": "Prodotti",
+    "recipes": "Ricette"
   },
   "foods": {
     "unitprice": "Prezzo unitario",

@@ -4,6 +4,7 @@ import { I18n } from 'react-i18next';
 import Home from '../Home/Home'
 import Foods from '../Foods/Foods'
 import Navbar from '../Navbar/Navbar'
+import Recipes from '../Recipes/Recipes'
 import NotFound from '../NotFound/NotFound'
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
               <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/foods' component={Foods} />
+                <Route path='/recipes' component={Recipes} />
                 <Route component={NotFound} />
               </Switch>
             </div>

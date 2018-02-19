@@ -30,11 +30,11 @@ export default class Foods extends Component {
         {
           (t, {i18n}) => (
             <Grid>
-              <Grid.Column width={4}>
+              <Grid.Column width={4} className={styles.Sticky}>
                 <Sidebar
                   loading={loading}
                   title='Foods'
-                  list={foods.map((food) => food.name)}
+                  list={foods.map((food) => food.Name)}
                   {...this.props}
                 />
               </Grid.Column>
@@ -45,23 +45,29 @@ export default class Foods extends Component {
                 <Route path={`${match.url}/:foodId`} render={({match}) => {
                   if (loading === true) return null
                   const {
-                    name, unitMeasure, unitPrice, vatCode, category, avatar
-                  } = foods.find((food) => slug(food.name) === match.params.foodId)
+                    Name, UnitMeasure, UnitPrice, VatCode, Category, Attachments
+                  } = foods.find((food) => slug(food.Name) === match.params.foodId)
+                  var imagePath = ''
+                  if (Attachments[0]) {
+                    imagePath = Attachments[0].avatar
+                  } else {
+                    imagePath = '/paragraph.png'
+                  }
                   return (
                     <Card>
-                        <Image src={`/assets/${avatar}`} />
+                        <Image size='medium' src={imagePath} />
                         <Card.Content>
-                          <Card.Header>{name}</Card.Header>
+                          <Card.Header>{Name}</Card.Header>
                           <Card.Meta>
                             <p className={styles.CardMeta}>
                               <Icon name='money' />
-                              {t('foods.unitprice')}: {Intl.NumberFormat(i18n.language, { style: 'currency', currency: 'EUR' }).format(unitPrice)}
+                              {t('foods.unitprice')}: {Intl.NumberFormat(i18n.language, { style: 'currency', currency: 'EUR' }).format(UnitPrice)}
                               &nbsp;
-                              ({t('foods.vatlabel')}: {Intl.NumberFormat('it-IT', { style: 'percent'}).format(vatCode)})
+                              ({t('foods.vatlabel')}: {Intl.NumberFormat('it-IT', { style: 'percent'}).format(VatCode)})
                             </p>
                             <p>
                               <Icon name='balance' />&nbsp;
-                              {t('foods.unitmeasure')}: {unitMeasure}
+                              {t('foods.unitmeasure')}: {UnitMeasure}
                             </p>
                           </Card.Meta>
                           <Card.Description>
@@ -85,17 +91,3 @@ export default class Foods extends Component {
     )
   }
 }
-
-/*
-return (
-      <I18n ns='translations'>
-        {
-          (t, {i18n}) => (
-            <div className='container two-column'>
-              {t('navbar.foods')}
-            </div>
-          )
-        }
-      </I18n>
-)
-*/

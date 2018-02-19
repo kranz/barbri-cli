@@ -12,7 +12,8 @@
   },
   "navbar": {
     "home": "Home",
-    "foods": "Foods"
+    "foods": "Foods",
+    "recipes": "Recipes"
   },
   "foods": {
     "unitprice": "Unit Price",

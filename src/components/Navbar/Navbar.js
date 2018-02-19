@@ -16,6 +16,9 @@ export default function Navbar () {
               <Menu.Item name='foods'>
                 <Link to='/foods'><Icon name='list' />{t('navbar.foods')}</Link>
               </Menu.Item>
+              <Menu.Item name='recipes'>
+                <Link to='/recipes'><Icon name='spy' />{t('navbar.recipes')}</Link>
+              </Menu.Item>
               <Menu.Menu position='right'>
                 <Menu.Item name='itaflag'>
                   <div onClick={() => i18n.changeLanguage('it')}>

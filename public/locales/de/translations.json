@@ -12,7 +12,8 @@
   },
   "navbar": {
     "home": "Home",
-    "foods": "Ciben"
+    "foods": "Ciben",
+    "recipes": "Ricetten"
   },
   "foods": {
     "unitprice": "Prezzen unitarien",
