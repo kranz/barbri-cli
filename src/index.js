@@ -6,5 +6,18 @@ import App from './components/App/App';
 import './i18n';
 import './semantic.min.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Redux-related imports
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers';
+import { devToolsEnhancer } from 'redux-devtools-extension';
+
+const store = createStore(rootReducer, devToolsEnhancer());
+
+ReactDOM.render(
+   <Provider store={store}>
+     <App />
+   </Provider>,
+  document.getElementById('root')
+);
 // registerServiceWorker();
